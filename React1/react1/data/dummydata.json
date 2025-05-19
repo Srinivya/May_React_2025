@@ -1,0 +1,29 @@
+
+{"courses":[
+{
+  "id":1,
+"name":"react",
+"fee":10000,
+"duration":"2Month"
+},
+{
+ "id":2,
+"name":"HTML",
+"fee":2000,
+"duration":"2Weeks"
+},
+{
+  "id":3,
+"name":"CSS",
+"fee":2000,
+"duration":"2Weeks"
+},
+{
+  "id":4,
+"name":"Js",
+"fee":6000,
+"duration":"1Month"
+}
+
+]
+}
