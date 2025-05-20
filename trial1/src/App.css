@@ -1,8 +1,9 @@
 .Card{
-    width: 500px;
     background-color: bisque;
     height: 300px;
+    width: 300px;
     border: 2px solid green;
     margin: 10px;
     padding: 10px;
+    
 }

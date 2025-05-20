@@ -5,9 +5,13 @@ const Child = ({id,name,fee,duration,delete:deleteButton}) => {
 
 const[purchased,setPurchase]=useState("false");
 
+
+
 useEffect(()=>{
   console.log("Inner child called")
 },[]);
+
+
 
 //  let purchased=false;
 
@@ -16,11 +20,7 @@ const handleClick=(discount)=>{
  // purchased=true;
  setPurchase("true");
 }
-
-
   return (
-
-
   name && <div className='Card'>
 <h1>Course name is {name}</h1>
 <h2>Fess : {fee}</h2>

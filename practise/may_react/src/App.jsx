@@ -1,5 +1,7 @@
 import React from 'react'
 import Check from './Check'
+// import Course from './Course'
+// import Counter from './Counter'
 
 
 const App = () => {
@@ -7,6 +9,8 @@ const App = () => {
     <div>
       <h1>hello</h1>
       <Check/>
+      {/* <Course/> */}
+      {/* <Counter/> */}
     </div>
   )
 }

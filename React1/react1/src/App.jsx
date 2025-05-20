@@ -11,6 +11,7 @@ const App = () => {
       
 <h1>App page</h1>
 <Link to="/login">Login</Link>
+<Link to="/Course">Course page</Link>
     </div>
   )
 }

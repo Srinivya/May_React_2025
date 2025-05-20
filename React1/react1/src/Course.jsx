@@ -15,8 +15,8 @@ const deleteButton=(id)=>{
 }
 
 
-let sorted=values.sort((x,y)=>y.fee-x.fee)
-const filt=sorted.filter((item)=>item.fee>5000)
+// let sorted=values.sort((x,y)=>y.fee-x.fee)
+// const filt=sorted.filter((item)=>item.fee>5000)
 
 if(!values){
   return (
