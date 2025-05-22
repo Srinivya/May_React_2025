@@ -1,6 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react'
 import Course from './Course';
-
 export const UserContext=createContext();
 
 const Check = () => {
@@ -25,10 +24,13 @@ const Check = () => {
 // )
 
 const [courses,setCourse]=useState([]);
+const [loading,setLoading]=useState(true);
 console.log(courses);
 
 useEffect(()=>{
-    fetch("https://jsonplaceholder.typicode.com/users")
+setTimeout(
+  ()=>{
+      fetch("https://jsonplaceholder.typicode.com/users")
     .then(response=>{
 
       console.log(response);
@@ -40,30 +42,21 @@ useEffect(()=>{
        )
      .then(data=>{console.log(data)
         setCourse(data);
+        setLoading(false);
+       
      })
      .catch((error)=>{
         console.log(error.message);
-     })
-},[])
+     }),10000
+  }
+);
+   }
+ 
+,[])
 
 
-// useEffect(() => {
-//   fetch("https://jsonplaceholder.typicode.com/users")
-//     .then(response => {
-//       console.log(response);
-//       if (!response.ok) {
-//         throw Error("not found");
-//       }
-//       return response.json();
-//     })
-//     .then(data => {
-//       console.log(data);
-//       setCourse(data);
-//     })
-//     .catch((error) => {
-//       console.log(error.message);
-//     });
-// }, []);
+
+
 
 
 
@@ -71,17 +64,15 @@ useEffect(()=>{
 //     <Course key={index} name={item.name} username={item.username} email={item.email}/>
 // ))
 
+
+
   return (
     <div>
 
-<UserContext.Provider value={{courses}}>
-
-<Course/>
+<UserContext.Provider value={{courses,loading}}>
+  <Course/>
 
 </UserContext.Provider>
-
-
-
 
       {/* <h1>{num}</h1>
       <button onClick={incr}>Add</button>
