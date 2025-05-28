@@ -1,0 +1,36 @@
+.nav{
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  background-color: antiquewhite;
+}
+.nav ul{
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+ 
+}
+.nav ul li{
+   list-style: none;
+   
+}
+.logo{
+  width: 60%;
+}
+.login{
+  background-color: aqua;
+  width: 60px;
+border-radius: 10px;
+height: 40px;
+margin-top: 3px;
+}
+.active{
+
+ color: rgb(28, 209, 113);
+}
+.UserCard{
+  height: 300px;
+  width: 600px;
+  border: 2px solid red;
+  background-color: honeydew;
+}

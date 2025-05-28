@@ -3,6 +3,11 @@ import './App.css'
 import Details from './Details'
 import './index.css'
 import axios from 'axios'
+import Paren from './Paren'
+import LayoutHandler from './LayoutHandler'
+import IncrementButton from './IncrementButton'
+import Reduce from './Reduce'
+import Todo from './Todo'
 
 export const UserContext=createContext();
 
@@ -52,17 +57,34 @@ useEffect(()=>{
 // const list=details.map((item)=>(
 //     <Details name={item.name} username={item.username} email={item.email}/>
 // ))
-
+const [count,setCount]=useState(0);
+const increase=()=>{
+setCount(count+1);
+}
+const decrese=()=>{
+  setCount(count-1);
+}
 
   return (
    
     <>
-    <UserContext.Provider value={{details}} >
+    {/* <UserContext.Provider value={{details}} >
 
       <Details/>
     </UserContext.Provider>
-   {/* {list} */}
-  
+   {list}
+
+  <Paren/> */}
+
+
+  {/* <h2>Count: {count}</h2>
+<LayoutHandler>
+  <IncrementButton onclick={increase} ofclick={decrese}/>
+</LayoutHandler> */}
+{/* <Reduce/> */}
+{/* <Todo/> */}
+
+
     </>
   )
 }

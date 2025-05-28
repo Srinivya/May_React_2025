@@ -7,6 +7,8 @@ import Timer from './Timer'
 import Parent from './Component/Parent'
 import LayoutHandler from './Composition/LayoutHandler'
 import IncrementButton from './Composition/IncrementButton'
+import Task1 from './Reducer/Task1'
+import Task2 from './Reducer/Task2'
 // import Course from './Course'
 // import Counter from './Counter'
 
@@ -33,11 +35,13 @@ setCount(count-1);
 {/* <Timer/> */}
      {/* <Parent/> */}
 
-<h2>Count: {count}</h2>
+{/* <h2>Count: {count}</h2>
 
 <LayoutHandler >
   <IncrementButton inc={increase} dec={decrease}/>
-</LayoutHandler>
+</LayoutHandler> */}
+{/* <Task1/> */}
+<Task2/>
 
     </div>
   )
